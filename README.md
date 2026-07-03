@@ -4,15 +4,22 @@
 * Install and Configure Active Directory within Oracle VirtualBox VMs
   * [Oracle VirtualBox: Diagram, Installation, and Setup](#oracle-virtualbox-diagram-installation-and-setup)
     * [Setting up Server VM](#step-3-set-up-the-server-virtual-machine-windows-server-2019)
-    * Create a Domain (Active Directory Domain Services)
-    * Setting up DHCP server on the Domain Controller
-    * Setting up Client VM
-    * (OPTIONAL) Download and run PowerShell script to add 1k test users.
-  * Active Directory: How to
-    * Create AD Organizational Units
-    * Create Domain User Accounts
-    * Create Security Groups
-  * Active Directory: Common Tasks and Troubleshooting
+    * [Create a Domain (Active Directory Domain Services)](#step-4-create-a-domain-active-directory-domain-services)
+    * [Setting up DHCP server on the Domain Controller](#step-5-set-up-dhcp-server-on-the-domain-controller)
+    * [Setting up Client VM](#step-6-set-up-the-client-vm)
+    * [(OPTIONAL) Download and run PowerShell script to add 1k test users](#step-7-optional-download-and-run-powershell-script-to-add-1k-test-users)
+  * [Active Directory: How to](#active-directory-how-to)
+    * [Create AD Organizational Units](#how-to-create-ad-organizational-units)
+    * [Create Domain User Accounts](#how-to-create-domain-user-accounts)
+    * [Create Security Groups](#how-to-create-security-groups)
+  * [Active Directory: Common Tasks and Troubleshooting]()
+    * [Configure Password Policy (Domain Wide)]()
+    *	[Delegate Password Reset Permissions to Helpdesk]()
+	   * [Forgot/Reset Password]()
+   	* [TROUBLESHOOTING STEPS]()
+   	* [Common troubleshooting problems: Client cannot join the domain]()
+   	* [Common troubleshooting problems: Login fails after domain join]()
+   	* [Common troubleshooting problems: User can log in but lacks expected access]()
 ## Connect with me:
 🔗[Linkedin](https://www.linkedin.com/in/alfred-choi-58102b127/)
 
@@ -75,7 +82,7 @@ I will guide you step by step through setting up a home lab running Active Direc
 * Continue installing Windows 10 OS. Ensure you install Windows Pro, not Home.  
 * Join the domain "mydomain.com" by logging in on the login screen or Start Menu -> Systems -> Advanced System Settings -> Computer Name -> Change... -> Under the Member of... -> Enter domain name and credientials. Okay and Restart.  
 * Ensure you have internet access by opening CMD and using ipconfig or ping.
-#### Step 7. (OPTIONAL) Download and run PowerShell script to add 1k test users.
+#### Step 7. (OPTIONAL) Download and run PowerShell script to add 1k test users
 * Log into the Domain Controller Server VM
 * Open Server Manager Dashboard -> Click Configure this local server -> Search for IE Enhanced Security Configuration and click "On" -> Turn off both Administrators and Users option (you may turn it back on after downloading the PowerShell Script provided below).  
 <img width="942" height="691" alt="8" src="https://github.com/user-attachments/assets/05fe7922-5b70-4f85-9d0c-2941e5e6a9a9" />
@@ -99,7 +106,7 @@ I will guide you step by step through setting up a home lab running Active Direc
 * Logon to the domain controller, Start Menu -> Windows Administrative Tools -> Active Directory Users and Computers.  
 * Right Click domain root -> New -> OU -> Name it _Groups.  
 * Right Click _Groups -> New -> Group -> Make three groups called Helpdesk, Accounting, and ITSupport.  
-###Active Directory: Common Tasks and Troubleshooting  
+### Active Directory: Common Tasks and Troubleshooting  
 #### Configure Password Policy (Domain Wide)  
 * Open Group Policy Management -> Expand Forest -> Domains -> mydomain.com (your domain name) -> Right-click Default Domain Policy -> Edit -> Navigate to Computer Configuration, Policies, Windows Settings, Security Settings, Account Policies, Password Policy -> Configure Maximum password age and length.  
 #### Delegate Password Reset Permissions to Helpdesk  
