@@ -89,7 +89,9 @@ I will guide you step by step through setting up a home lab running Active Direc
 
 * Open Internet Explorer and click [here](https://github.com/joshmadakor1/AD_PS/archive/master.zip) to download the PowerShell Script (Credits to [Josh Madakor](https://www.youtube.com/@JoshMadakor)).  
 * Extract file to desktop -> Start menu -> Windows PowerShell -> Windows PowerShell ISE -> On PowerShell ISE click File -> Open -> Locate the recently downloaded and extract folder -> Open 1_CREATE_USERS.ps1  
-* In the blue section of PowerShell ISE, type the following ->  Set-ExecutionPolicy Unrestricted (only run this command safely in a VM setting) -> Yes to all -> Run Script (F5, run it once).  
+* In the blue section of PowerShell ISE, type the following (only run this command safely in a VM setting)
+> Set-ExecutionPolicy Unrestricted  
+-> Yes to all -> Run Script (F5, run it once).  
 ### Active Directory: How to
 #### How to Create AD Organizational Units
 * Logon to the domain controller, Start Menu -> Windows Administrative Tools -> Active Directory Users and Computers.  
@@ -123,7 +125,8 @@ I will guide you step by step through setting up a home lab running Active Direc
 * Client VM is on a different virtual network.  
 * Client DNS is not pointing to the domain controller.  
 * Domain Controller is powered off or unreachable.  
-* On the client, verify DNS configuration using > ipconfig /all.  
+* On the client, verify DNS configuration using  
+> ipconfig /all.  
 #### Common troubleshooting problems: Login fails after domain join.
 * Computer was not rebooted after joining the domain.  
 * User logged in with a local account.  
@@ -131,4 +134,5 @@ I will guide you step by step through setting up a home lab running Active Direc
 #### Common troubleshooting problems: User can log in but lacks expected access.
 * User is not a member of the correct security group.  
 * Group membership was added after the user logged in (user must relog in).  
-* Verify user's security token using > whoami /groups.  
+* Verify user's security token using  
+> whoami /groups.  
