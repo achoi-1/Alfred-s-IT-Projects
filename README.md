@@ -123,7 +123,7 @@ I will guide you step by step through setting up a home lab running Active Direc
 * Client VM is on a different virtual network.  
 * Client DNS is not pointing to the domain controller.  
 * Domain Controller is powered off or unreachable.  
-* On the client, verify DNS configuration using >ipconfig /all.  
+* On the client, verify DNS configuration using > ipconfig /all.  
 #### Common troubleshooting problems: Login fails after domain join.
 * Computer was not rebooted after joining the domain.  
 * User logged in with a local account.  
@@ -131,4 +131,4 @@ I will guide you step by step through setting up a home lab running Active Direc
 #### Common troubleshooting problems: User can log in but lacks expected access.
 * User is not a member of the correct security group.  
 * Group membership was added after the user logged in (user must relog in).  
-* Verify user's security token using >whoami /groups.  
+* Verify user's security token using > whoami /groups.  
