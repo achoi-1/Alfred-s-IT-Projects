@@ -20,7 +20,7 @@
    	* [Common troubleshooting problems: Client cannot join the domain](#common-troubleshooting-problems-client-cannot-join-the-domain)
    	* [Common troubleshooting problems: Login fails after domain join](#common-troubleshooting-problems-login-fails-after-domain-join)
    	* [Common troubleshooting problems: User can log in but lacks expected access](#common-troubleshooting-problems-user-can-log-in-but-lacks-expected-access)
-* Signup, Set up, and Explore ServiceNow PDI Incident Management Tool
+* Signup, Setup, and Explore ServiceNow PDI Incident Management Tool
   * [Signup and Setup for ServiceNow Developer PDI](#signup-and-setup-for-servicenow-developer-pdi)
   * [Understanding the fundamentals of ServiceNow Incident Tool](#understanding-the-fundamentals-of-servicenow-incident-tool)
 ## Connect with me:
